@@ -1,0 +1,21 @@
+<h1 class="title">New Post</h1>
+
+<div class="section">
+    <%= simple_form_for @post do |f| %>
+        <div class="field">
+            <%= f.label :title, "Title" %>
+            <div class="control">
+                <%= f.text_field :title, class:"input", placeholder:"Title", :required => true   %>
+            </div>
+        </div>
+        <div class="field">
+            <%= f.label :content, "Content" %>
+            <div class="control">
+                <%= f.text_area :content, class:"input", placeholder:"content", :required => true   %>
+            </div>
+        </div>
+        <div class="field">
+             <%= f.submit  class:"button is-success" %>
+        </div>
+    <% end %>
+</div>
