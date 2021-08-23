@@ -1,3 +1,6 @@
+
+<% content_for :page_title, "Home" %>
+
 <div class="section">
     <% @posts.each do |post| %>
         <div class="card">
@@ -8,7 +11,7 @@
                     </p>
                 </div>
                 <div class="content">
-                    <%= post.content %>
+                    <%= truncate(post.content) %>
                 </div>
                 <div class="content">
                     <time datetime="2016-1-1">Uploaded at: <%= post.created_at %></time>
