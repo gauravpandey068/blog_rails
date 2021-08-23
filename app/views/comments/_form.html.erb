@@ -1,0 +1,17 @@
+<%= simple_form_for([@post, @post.comments.build]) do |f| %>
+  <div class="field">
+      <%= f.label :name, "Name" %>
+      <div class="control">
+          <%= f.text_field :name, class:"input", placeholder:"Name", :required => true   %>
+      </div>
+  </div>
+  <div class="field">
+      <%= f.label :message, "Comment" %>
+      <div class="control">
+          <%= f.text_area :message, class:"input",  placeholder:"Leave a Message", :required => true   %>
+      </div>
+  </div>
+  <div class="field">
+       <%= f.submit  class:"button is-success" %>
+  </div>
+<%end %>

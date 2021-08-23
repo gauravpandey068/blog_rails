@@ -4,8 +4,8 @@
 
     <nav class="level">
         <div class="level-left">
-            <p class="level-item">
-
+            <p class="level-item tag is-info is-light">
+                Uploaded at: <%= @post.created_at %>
             </p>
         </div>
         <div class="level-right">
@@ -19,13 +19,19 @@
     </nav>
 
     <div class="content">
-
         <%= simple_format(@post.content) %>
     </div>
-    <div class="content">
-        <%= @post.created_at %>
-    </div>
-</section>
-<section class="section">
 
+</section>
+<section class="comments section">
+  <h2 class="subtitle is-5">
+    <span class="tag is-primary"> <%= @post.comments.count %> </span> Comments
+  </h2>
+  <%= render @post.comments %>
+
+  <div class="comments-form">
+    <h3 class="subtitle is-4">Leave a comment</h3>
+    <%= render 'comments/form' %>
+
+  </div>
 </section>

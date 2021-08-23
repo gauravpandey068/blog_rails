@@ -15,7 +15,7 @@
                 </div>
                 <div class="content">
                     <time datetime="2016-1-1">Uploaded at: <%= post.created_at %></time>
-                    <div class="comment-count"><span class="tag is-danger is-rounded">10</span></div>
+                    <div class="comment-count"><span class="tag is-danger is-rounded"> <%= post.comments.count %> Comments </span></div>
                 </div>
             </div>
         </div>
